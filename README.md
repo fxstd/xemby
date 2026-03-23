@@ -58,6 +58,17 @@ XEmby 面向 Emby 用户，目标是在不同设备上提供统一、直接、�
 - 需要从“继续观看”无缝回到上次播放位置
 - 希望在同一套产品语言下完成浏览、选集和播放
 
+## QQ群沟通
+
+如果你想反馈问题、交流使用体验或关注后续更新，可以加入 XEmby QQ 群：
+
+- 群号：`698011070`
+- 链接：[加入群聊【XEmby】](https://qm.qq.com/q/w2e5Q7JnGM)
+
+<p align="left">
+  <img src="images/qrcode_qqgroup.jpg" alt="XEmby QQ Group QR Code" width="320">
+</p>
+
 ## 目录说明
 
 ```text
@@ -69,6 +80,7 @@ XEmby 面向 Emby 用户，目标是在不同设备上提供统一、直接、�
    │  ├─ home.png
    │  ├─ login.png
    │  └─ player.png
+   ├─ qrcode_qqgroup.jpg
    └─ windows/
       ├─ details.png
       ├─ home.png
