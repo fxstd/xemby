@@ -1,91 +1,48 @@
 # XEmby
 
-<p align="center">
-  <img src="images/windows/home.png" alt="XEmby Windows Home" width="88%">
-</p>
+XEmby 是一款面向 **Windows x64** 的 Emby 客户端，支持媒体库浏览、剧集续播和电视直播。播放器基于 libmpv，默认使用 D3D11 硬件解码。
 
-<p align="center">
-  一个围绕 Emby 打造的多平台客户端，覆盖登录、媒体库浏览、详情页和播放器主链路。
-</p>
+[下载 Windows 版](https://github.com/fxstd/xemby/releases) · [加入 QQ 群](https://qm.qq.com/q/w2e5Q7JnGM)
 
-## 项目简介
+![XEmby 首页：我的媒体、继续观看和电视直播](images/windows/主页.png)
 
-XEmby 面向 Emby 用户，目标是在不同设备上提供统一、直接、易用的媒体浏览与播放体验。当前展示内容覆盖移动端与 Windows 桌面端界面，整体采用深色视觉风格，突出海报墙、继续观看和播放控制等高频场景。
+## 下载安装
 
-## 核心体验
+1. 在发布页的 **Assets** 中选择 Windows 安装包或 ZIP 压缩包。若下载 ZIP，请完整解压后再启动程序，不要单独复制 EXE。
+2. 首次启动时填写 Emby 服务器地址、用户名和密码。服务器地址可以包含子路径，例如 `https://example.com/emby`。
+3. 登录后可浏览媒体库；如需观看直播，你的 Emby 服务器须已配置直播源，且账号有直播权限。
 
-- 连接 Emby 服务器并完成账号登录
-- 浏览首页内容、继续观看和媒体库条目
-- 查看电影、剧集与分集详情
-- 从详情页直接进入播放器并继续播放
-- 在移动端与 Windows 桌面端保持一致的视觉语言
+如果启动时提示缺少运行库，请安装微软的 [Visual C++ x64 运行库](https://aka.ms/vs/17/release/vc_redist.x64.exe)。XEmby 不内置影视内容或直播源。
+
+> 本页截图及功能以当前 Windows 版为准，较早的发布包可能不包含全部功能。
+
+## 主要功能
+
+- **媒体库与搜索**：通过海报墙浏览电影和剧集，支持全局搜索、排序及查看最新添加内容。
+- **续播与选集**：通过「继续观看」回到上次播放位置；支持已看标记、播放中选集和自动连播。
+- **点播控制**：优先直播放原始媒体，支持倍速、音轨、字幕和播放版本切换；进度条显示已缓冲范围。
+- **在线字幕**：除内嵌字幕和 Emby 外挂字幕外，也可配置 OpenSubtitles 或 ASSRT 账号搜索字幕。
+- **片头片尾**：可手动设置跳过区间，或在「播放设置 → 片头片尾」开启 IntroDB 自动识别；进度条会标记对应区间。
+- **电视直播**：支持 Emby 提供的 RTSP 和 HTTP 直播流，可搜索频道，或在播放中通过频道列表、上一频道和下一频道换台。
+
+常用快捷键：`空格` 播放或暂停，`←` / `→` 后退或前进 10 秒，`F11` 切换全屏，`Esc` 返回。
 
 ## 界面预览
 
-### 移动端
+| 媒体库 · 海报墙与排序 | 剧集详情 · 选集与续播 |
+| :---: | :---: |
+| ![媒体库海报墙与排序菜单](images/windows/媒体库.png) | ![剧集详情、继续播放按钮及分集列表](images/windows/详情页.png) |
+| **点播 · 字幕与进度** | **播放中选集 · 无需返回详情页** |
+| ![点播播放器、字幕及片头片尾标记](images/windows/点播.png) | ![播放器内的分集列表和当前集高亮](images/windows/剧集切换.png) |
 
-<p align="center">
-  <img src="images/mobile/login.png" alt="XEmby Mobile Login" width="30%">
-  <img src="images/mobile/home.png" alt="XEmby Mobile Home" width="30%">
-  <img src="images/mobile/details.png" alt="XEmby Mobile Details" width="30%">
-  <img src="images/mobile/player.png" alt="XEmby Mobile Player" width="60%">
-</p>
+### 电视直播
 
-- 登录页支持直接填写 Emby 服务器地址、用户名和密码。
-- 首页聚焦继续观看与媒体库浏览，适合触控场景快速进入内容。
-- 详情页强调剧集信息、分集切换和继续播放入口。
-- 播放器围绕进度控制与沉浸式观看体验进行设计。
+![电视直播界面，展示当前频道和换台控制](images/windows/直播.png)
 
-### Windows 桌面端
+## 交流与反馈
 
-<p align="center">
-  <img src="images/windows/login.png" alt="XEmby Windows Login" width="48%">
-  <img src="images/windows/home.png" alt="XEmby Windows Home" width="48%">
-</p>
+QQ 群：`698011070` · [加入群聊【XEmby】](https://qm.qq.com/q/w2e5Q7JnGM)
 
-<p align="center">
-  <img src="images/windows/details.png" alt="XEmby Windows Details" width="48%">
-  <img src="images/windows/player.png" alt="XEmby Windows Player" width="48%">
-</p>
+<img src="images/qrcode_qqgroup.jpg" alt="XEmby QQ 群二维码" width="240">
 
-- 桌面端首页突出海报墙和继续观看，适合大屏浏览。
-- 详情页提供更宽松的信息布局，便于快速浏览简介、分集和演职员。
-- 播放器更强调全屏观影与桌面控制体验。
-
-## 适合的使用场景
-
-- 想在手机或桌面端快速进入 Emby 媒体库
-- 需要从“继续观看”无缝回到上次播放位置
-- 希望在同一套产品语言下完成浏览、选集和播放
-
-## QQ群沟通
-
-如果你想反馈问题、交流使用体验或关注后续更新，可以加入 XEmby QQ 群：
-
-- 群号：`698011070`
-- 链接：[加入群聊【XEmby】](https://qm.qq.com/q/w2e5Q7JnGM)
-
-<p align="left">
-  <img src="images/qrcode_qqgroup.jpg" alt="XEmby QQ Group QR Code" width="320">
-</p>
-
-## 目录说明
-
-```text
-.
-├─ README.md
-└─ images/
-   ├─ mobile/
-   │  ├─ details.png
-   │  ├─ home.png
-   │  ├─ login.png
-   │  └─ player.png
-   ├─ qrcode_qqgroup.jpg
-   └─ windows/
-      ├─ details.png
-      ├─ home.png
-      ├─ login.png
-      └─ player.png
-```
-
-当前目录是 XEmby 的发布展示目录，主要用于介绍产品和存放界面截图素材；完整源码工程不在这个目录中。
+本仓库用于发布和展示 XEmby，不包含完整源码。
